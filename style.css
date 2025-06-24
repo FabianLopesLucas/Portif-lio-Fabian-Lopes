@@ -1,0 +1,295 @@
+* {
+    font-family: "Montserrat", sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    color: #1a1b1f;
+    font-style: normal;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 28px;
+}
+
+.navegacao {
+    padding: 30px 50px;
+    color: #1a1b1f;
+    background: transparent;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 500;
+    line-height: 20px;
+    letter-spacing: 1.2px;
+}
+
+.lista {
+    width: 100%;
+    position: relative;
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 40px;
+}
+
+.logo {
+    height: 41px;
+    width: 150px;
+    display: block;
+    z-index: 2;
+}
+
+.listas {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 20px;
+    list-style: none;
+    align-items: center;
+    margin: 0;
+    padding: 0;
+    z-index: 1;
+}
+
+.link-nav {
+    text-decoration: none;
+    color: black;
+}
+
+.link-nav:hover {
+    color: white;
+}
+
+li {
+    opacity: 0.6;
+    font-size: 12px;
+    padding: 9px 20px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    padding-top: 9px;
+    padding-bottom: 9px;
+    font-weight: 500;
+    line-height: 20px;
+}
+
+li:hover {
+    background: rgba(73, 73, 73, 0.466);
+}
+
+.fundo {
+    margin: 0 30px;
+    padding: 20px 0;
+    background-image: url('img/composicao-abstrata-de-luz-ultravioleta-uv (1).jpg');
+    background-size: 100% 100%;
+    background-position: 0 0;
+    background-repeat: no-repeat;
+    height: 620px;
+    width: auto;
+}
+
+.image-fabian {
+    padding-top: 20px;
+    text-align: center;
+    background-position: 0 0;
+    background-size: auto;
+    width: 15%;
+    max-width: 15%;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+
+.conteudo {
+    box-sizing: border-box;
+    grid-column-gap: 16px;
+    grid-row-gap: 16px;
+    aspect-ratio: auto;
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    grid-auto-columns: 1fr;
+    width: 100%;
+    margin-bottom: 20px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    overflow: visible;
+}
+
+.titulo-principal {
+    letter-spacing: 3px;
+    text-align: center;
+    text-transform: none;
+    color: white;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 64px;
+    font-weight: 200;
+    line-height: 80px;
+}
+
+.profissao {
+    color: white;
+    text-align: center;
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-weight: 400;
+    font-style: inherit;
+    line-height: 34px;
+    opacity: 75%;
+}
+
+.divider {
+    background-color: #eee;
+    height: 1px;
+    margin: 80px 30px 30px 30px;
+}
+
+.titulo-sobre {
+    letter-spacing: 1.1px;
+    margin-bottom: 30px;
+    opacity: .6;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    text-decoration: none;
+    overflow: visible;
+}
+
+.image-fabian2 {
+    display: block;
+    align-items: center;
+}
+
+.quem-sou-eu {
+    display: grid;
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    grid-template: ". ." / 1fr 2fr;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.quem-sou-eu2 {
+    margin-bottom: 30px;
+}
+
+
+
+.titulo-lorem,
+.titulo-lorem2 {
+    opacity: .6;
+    text-align: center;
+    font-size: 18px;
+    font-weight: 500;
+    text-decoration: none;
+    overflow: visible;
+}
+
+
+.container-sobre {
+    box-sizing: border-box;
+    float: none;
+    clear: none;
+    text-align: center;
+    object-fit: fill;
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 30px;
+}
+
+.secao-sobre-mim {
+    margin: 0 40px;
+}
+
+.container {
+    margin-left: 30px;
+    margin-right: 30px;
+    padding-top: 100px;
+    padding-bottom: 100px;
+}
+
+.works-content {
+    box-sizing: border-box;
+    float: none;
+    clear: none;
+    text-align: center;
+    object-fit: fill;
+    width: 100%;
+    max-width: 1140px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.works-intro-title {
+    margin-bottom: 30px;
+    opacity: .6;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 500;
+    text-decoration: none;
+    overflow: visible;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+.works-intro {
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.works-intro-heade {
+    text-align: center;
+    flex-flow: row;
+    width: 100%;
+    display: flex;
+}
+
+.works-intro-text {
+    width: 50%;
+    height: 300px;
+    margin: 20px;
+}
+
+.section-tittle {
+    height: 300px;
+    margin: 20px;
+}
+
+.section-description {
+    margin-bottom: 10px;
+}
+
+.work-detail {
+    width: 50%;
+    height: 300px;
+    margin: 20px;
+}
+
+.works-tittle2 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-size: 25px;
+    font-weight: 500;
+}
+
+.works-description2 {
+    margin-right: 0;
+}
+
+.titulo-quem-sou {
+    opacity: .8;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: visible;
+    margin-top: 10px;
+    margin-bottom: 30px;
+    letter-spacing: 1.1px;
+}
