@@ -4,7 +4,13 @@
     margin: 0;
 }
 
+html {
+     overflow-x: hidden;
+}
+
 body {
+    background-color: white;
+    transition: background-color 0.3s ease, color 0.3s ease;
     color: #1a1b1f;
     font-style: normal;
     font-size: 16px;
@@ -12,15 +18,43 @@ body {
     line-height: 28px;
 }
 
+body.dark-mode {
+    background-color: #121212;
+    color: #e0e0e0;
+}
+
 .navegacao {
-    padding: 30px 50px;
+    background-color: white;
     color: #1a1b1f;
-    background: transparent;
+    padding: 30px 50px;
     text-transform: uppercase;
     font-size: 12px;
     font-weight: 500;
     line-height: 20px;
     letter-spacing: 1.2px;
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+.navegacao a {
+    color: #1a1b1f;
+    transition: color 0.3s ease;
+}
+
+.navegacao a:hover {
+    color: #555;
+}
+
+body.dark-mode .navegacao {
+    background-color: #1a1b1f;
+    color: #e0e0e0;
+}
+
+body.dark-mode .navegacao a {
+    color: #e0e0e0;
+}
+
+body.dark-mode .navegacao a:hover {
+    color: #bbb;
 }
 
 .lista {
@@ -55,6 +89,7 @@ body {
 .link-nav {
     text-decoration: none;
     color: black;
+    transition: color 0.3s ease;
 }
 
 .link-nav:hover {
@@ -67,10 +102,9 @@ li {
     padding: 9px 20px;
     letter-spacing: 1px;
     text-transform: uppercase;
-    padding-top: 9px;
-    padding-bottom: 9px;
     font-weight: 500;
     line-height: 20px;
+    transition: background 0.3s ease;
 }
 
 li:hover {
@@ -136,7 +170,7 @@ li:hover {
     font-weight: 400;
     font-style: inherit;
     line-height: 34px;
-    opacity: 75%;
+    opacity: 0.75;
 }
 
 .divider {
@@ -148,47 +182,32 @@ li:hover {
 .titulo-sobre {
     letter-spacing: 1.1px;
     margin-bottom: 30px;
-    opacity: .6;
+    opacity: 0.6;
     text-align: center;
     font-size: 26px;
     font-weight: 500;
-    text-decoration: none;
     overflow: visible;
 }
 
-.image-fabian2 {
-    display: block;
-    align-items: center;
-}
-
-.quem-sou-eu {
-    display: grid;
-    grid-column-gap: 80px;
-    grid-row-gap: 80px;
-    grid-template: ". ." / 1fr 2fr;
-    align-items: center;
-    margin-top: 20px;
-    margin-bottom: 80px;
-    justify-content: center;
-    justify-items: center;
-}
-
-.quem-sou-eu2 {
+.titulo-quem-sou {
+    opacity: 0.8;
+    text-align: center;
+    font-size: 26px;
+    font-weight: 600;
+    overflow: visible;
+    margin-top: 10px;
     margin-bottom: 30px;
+    letter-spacing: 1.1px;
 }
-
-
 
 .titulo-lorem,
 .titulo-lorem2 {
-    opacity: .6;
+    opacity: 0.6;
     text-align: center;
     font-size: 18px;
     font-weight: 500;
-    text-decoration: none;
     overflow: visible;
 }
-
 
 .container-sobre {
     box-sizing: border-box;
@@ -227,15 +246,12 @@ li:hover {
 }
 
 .works-intro-title {
-    margin-bottom: 30px;
-    opacity: .6;
+    margin-bottom: 20px;
+    opacity: 0.6;
     text-align: center;
     font-size: 26px;
     font-weight: 500;
-    text-decoration: none;
     overflow: visible;
-    margin-top: 10px;
-    margin-bottom: 20px;
 }
 
 .works-intro {
@@ -282,14 +298,60 @@ li:hover {
     margin-right: 0;
 }
 
-.titulo-quem-sou {
-    opacity: .8;
-    text-align: center;
-    font-size: 26px;
-    font-weight: 600;
-    text-decoration: none;
-    overflow: visible;
-    margin-top: 10px;
+.image-fabian2 {
+    display: block;
+    align-items: center;
+}
+
+.quem-sou-eu {
+    display: grid;
+    grid-column-gap: 80px;
+    grid-row-gap: 80px;
+    grid-template: ". ." / 1fr 2fr;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 80px;
+    justify-content: center;
+    justify-items: center;
+}
+
+.quem-sou-eu2 {
     margin-bottom: 30px;
-    letter-spacing: 1.1px;
+}
+
+#darkModeToggle {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #1a1b1f;
+    color: #f0f0f0;
+    border: 2px solid #1a1b1f;
+    padding: 12px 18px;
+    border-radius: 50px;
+    cursor: pointer;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+    box-shadow: 0 0 6px #1a1b1f;
+    transition: all 0.3s ease;
+    z-index: 9999;
+    backdrop-filter: blur(10px);
+}
+
+#darkModeToggle:hover {
+    background-color: #333333;
+    box-shadow: 0 0 12px #333333;
+    transform: scale(1.05);
+}
+
+body.dark-mode #darkModeToggle {
+    color: #ffffff;
+    background-color: #1a1b1f;
+    border-color: #1a1b1f;
+    box-shadow: 0 0 6px #1a1b1f;
+}
+
+body.dark-mode #darkModeToggle:hover {
+    background-color: #333333;
+    box-shadow: 0 0 12px #333333;
 }
